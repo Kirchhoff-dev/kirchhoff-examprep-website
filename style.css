@@ -1,6 +1,6 @@
 /* ============================================
    EXAM PREP WEBSITE — MAIN STYLESHEET
-   Green Theme: #10B981 / #1B5E20
+   Professional Green Theme
    ============================================ */
 
 /* RESET */
@@ -46,6 +46,11 @@ body {
     color: var(--green);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ============================================
    NAVIGATION
    ============================================ */
@@ -70,15 +75,17 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     text-decoration: none;
     color: var(--text);
     font-weight: 800;
-    font-size: 22px;
+    font-size: 20px;
 }
 
-.logo-icon {
-    font-size: 28px;
+.nav-logo img {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
 }
 
 .logo-text {
@@ -275,8 +282,11 @@ body {
     text-align: center;
 }
 
-.phone-emoji {
-    font-size: 48px;
+.phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
 }
 
 /* ============================================
@@ -321,6 +331,7 @@ body {
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid var(--border);
+    text-align: center;
 }
 
 .feature-card:hover {
@@ -330,9 +341,10 @@ body {
 }
 
 .feature-icon {
-    font-size: 36px;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
     display: block;
-    margin-bottom: 16px;
 }
 
 .feature-card h3 {
@@ -348,34 +360,49 @@ body {
 }
 
 /* ============================================
-   TESTIMONIALS
+   TESTIMONIALS SLIDER
    ============================================ */
 
 .testimonials {
     background: var(--green-light);
+    overflow: hidden;
 }
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+.testimonial-slider {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    padding: 0 16px;
 }
 
 .testimonial-card {
     background: var(--card);
     border-radius: var(--radius);
-    padding: 28px;
+    padding: 32px;
     box-shadow: var(--shadow);
     border-left: 4px solid var(--green);
+    text-align: center;
 }
 
 .stars {
     margin-bottom: 12px;
     font-size: 18px;
+    color: #F59E0B;
+    letter-spacing: 2px;
 }
 
 .testimonial-text {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--text-secondary);
     font-style: italic;
     line-height: 1.7;
@@ -383,9 +410,32 @@ body {
 }
 
 .testimonial-name {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--green-dark);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #D1D5DB;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.slider-dot.active {
+    background: var(--green);
+    width: 24px;
+    border-radius: 5px;
 }
 
 /* ============================================
@@ -420,8 +470,9 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-.download-icon {
-    font-size: 32px;
+.btn-download img {
+    width: 32px;
+    height: 32px;
 }
 
 .btn-download strong {
@@ -496,9 +547,18 @@ body {
 }
 
 .footer-logo {
-    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
     font-weight: 900;
     color: white;
+}
+
+.footer-logo img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
 }
 
 .footer-brand p {
@@ -617,4 +677,4 @@ body {
     .btn-download {
         min-width: 100%;
     }
-}
+   }
