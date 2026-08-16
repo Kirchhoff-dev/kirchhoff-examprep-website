@@ -5,9 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — Exam Prep</title>
     <meta name="description" content="Learn about Exam Prep — Nigeria's smartest CBT exam preparation app for JAMB, WAEC, NECO, and Post UTME.">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #ECFDF5 0%, #F0FDF4 50%, #F9FAFB 100%);
+            padding: 80px 24px 60px;
+            text-align: center;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .story-text h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        
+        .story-paragraph {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .story-card {
+            background: var(--green-light);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 1px solid var(--green);
+        }
+        
+        .story-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--green-dark);
+            margin-bottom: 12px;
+        }
+        
+        .story-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        
+        .offer-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .offer-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--green);
+        }
+        
+        .offer-card img {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            display: block;
+        }
+        
+        .offer-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .offer-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .disclaimer-card {
+            background: #FFF3E0;
+            border-left: 5px solid #E65100;
+            padding: 24px;
+            border-radius: var(--radius-sm);
+        }
+        
+        .disclaimer-card h3 {
+            color: #BF360C;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .disclaimer-card p {
+            color: #BF360C;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -15,7 +129,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <span class="logo-icon">📚</span>
+                <img src="logo.png" alt="Exam Prep Logo">
                 <span class="logo-text">Exam<span class="accent">Prep</span></span>
             </a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -37,10 +151,8 @@
 
     <!-- ABOUT HERO -->
     <section class="about-hero">
-        <div class="section-container">
-            <h1 class="section-title">About <span class="accent">Exam Prep</span></h1>
-            <p class="section-subtitle">Building the future of exam preparation in Nigeria</p>
-        </div>
+        <h1 class="section-title">About <span class="accent">Exam Prep</span></h1>
+        <p class="section-subtitle" style="margin-bottom: 0;">Building the future of exam preparation in Nigeria</p>
     </section>
 
     <!-- OUR STORY -->
@@ -48,7 +160,7 @@
         <div class="section-container">
             <div class="story-grid">
                 <div class="story-text">
-                    <h2 class="story-title">Our <span class="accent">Story</span></h2>
+                    <h2>Our <span class="accent">Story</span></h2>
                     <p class="story-paragraph">
                         Exam Prep was born from a simple observation: Nigerian students were struggling to find quality, affordable exam preparation tools. With JAMB, WAEC, NECO, and Post UTME becoming increasingly competitive, students needed more than just textbooks — they needed a smart, accessible, and realistic way to practice.
                     </p>
@@ -60,7 +172,6 @@
                     </p>
                 </div>
                 <div class="story-card">
-                    <span class="story-emoji">🎯</span>
                     <h3>Our Mission</h3>
                     <p>To make quality exam preparation accessible to every Nigerian student, regardless of their location or internet access.</p>
                 </div>
@@ -72,34 +183,36 @@
     <section class="about-offer">
         <div class="section-container">
             <h2 class="section-title">What We <span class="accent">Offer</span></h2>
+            <p class="section-subtitle">Comprehensive preparation tools for every exam</p>
+            
             <div class="offer-grid">
                 <div class="offer-card">
-                    <span class="feature-icon">🎯</span>
+                    <img src="icon-cbt.png" alt="CBT Simulator">
                     <h3>CBT Simulator</h3>
                     <p>Realistic exam environment that mirrors the actual JAMB, WAEC, and Post UTME computer-based tests.</p>
                 </div>
                 <div class="offer-card">
-                    <span class="feature-icon">📚</span>
+                    <img src="icon-questions.png" alt="Questions">
                     <h3>50,000+ Questions</h3>
                     <p>Extensive past questions with step-by-step explanations across all major subjects.</p>
                 </div>
                 <div class="offer-card">
-                    <span class="feature-icon">📖</span>
+                    <img src="icon-novel.png" alt="Novel Summaries">
                     <h3>Novel Summaries</h3>
                     <p>Complete summaries of recommended novels with likely exam questions and answers.</p>
                 </div>
                 <div class="offer-card">
-                    <span class="feature-icon">🏫</span>
+                    <img src="icon-postutme.png" alt="Post UTME">
                     <h3>Post UTME Prep</h3>
                     <p>School-specific practice for 23+ Nigerian universities with subject selection.</p>
                 </div>
                 <div class="offer-card">
-                    <span class="feature-icon">📊</span>
+                    <img src="icon-analytics.png" alt="Analytics">
                     <h3>Analytics</h3>
                     <p>Track your performance, identify weak areas, and monitor improvement over time.</p>
                 </div>
                 <div class="offer-card">
-                    <span class="feature-icon">🔒</span>
+                    <img src="icon-download.png" alt="Offline Access">
                     <h3>Offline Access</h3>
                     <p>Study anytime, anywhere — no internet connection required for core features.</p>
                 </div>
@@ -111,7 +224,6 @@
     <section class="about-disclaimer">
         <div class="section-container">
             <div class="disclaimer-card">
-                <span class="disclaimer-icon">⚠️</span>
                 <h3>Important Disclaimer</h3>
                 <p>Exam Prep is an independent educational app. We are NOT affiliated with, endorsed by, or connected to JAMB, WAEC, NECO, or any official examination body. All questions and materials are for practice purposes only.</p>
             </div>
@@ -123,7 +235,7 @@
         <div class="section-container">
             <h2>Ready to Start <span class="accent">Smashing Your Exams?</span></h2>
             <p>Download Exam Prep today and join thousands of successful students!</p>
-            <a href="index.html#download" class="btn-primary">⬇️ Download Free</a>
+            <a href="index.html#download" class="btn-primary">Download Free</a>
         </div>
     </section>
 
@@ -132,7 +244,10 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="footer-logo">📚 Exam<span class="accent">Prep</span></span>
+                    <span class="footer-logo">
+                        <img src="logo.png" alt="Exam Prep Logo">
+                        Exam<span class="accent">Prep</span>
+                    </span>
                     <p>Nigeria's smartest CBT exam preparation app. Prepare smarter, score higher.</p>
                 </div>
                 <div class="footer-links">
@@ -147,11 +262,12 @@
                     <a href="support.html">Contact Us</a>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="https://t.me/KirchhoffExamPrep" target="_blank">Telegram</a>
+                    <a href="https://whatsapp.com/channel/0029Vb7NGXBCMY0DDEUXz546" target="_blank">WhatsApp Channel</a>
                 </div>
                 <div class="footer-links">
                     <h4>Download</h4>
                     <a href="https://apkpure.com/p/com.kirchhoff.examprep" target="_blank">APKPure</a>
-                    <a href="https://uptodown.com" target="_blank">UpToDown</a>
+                    <a href="examprep.apk.com" target="_blank">Official Website</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -163,4 +279,4 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
