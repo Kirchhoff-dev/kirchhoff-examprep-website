@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support — Exam Prep</title>
     <meta name="description" content="Contact Exam Prep support. Get help with installation, activation, and troubleshooting.">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -32,6 +33,7 @@
             transition: var(--transition);
             text-decoration: none;
             color: var(--text);
+            display: block;
         }
         
         .support-card:hover {
@@ -40,14 +42,15 @@
             border-color: var(--green);
         }
         
-        .support-icon {
-            font-size: 40px;
+        .support-card img {
+            width: 44px;
+            height: 44px;
+            margin: 0 auto 16px;
             display: block;
-            margin-bottom: 16px;
         }
         
         .support-card h3 {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
             margin-bottom: 8px;
         }
@@ -55,84 +58,7 @@
         .support-card p {
             font-size: 13px;
             color: var(--text-secondary);
-        }
-        
-        .contact-form {
-            background: var(--card);
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .contact-form h3 {
-            font-size: 22px;
-            font-weight: 800;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-        
-        .contact-form p {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 14px;
-            margin-bottom: 28px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            font-size: 14px;
-            font-family: inherit;
-            transition: var(--transition);
-            background: var(--bg);
-            color: var(--text);
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--green);
-            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-        }
-        
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            background: var(--green);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: var(--transition);
-            font-family: inherit;
-        }
-        
-        .submit-btn:hover {
-            background: var(--green-dark);
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -142,7 +68,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <span class="logo-icon">📚</span>
+                <img src="logo.png" alt="Exam Prep Logo">
                 <span class="logo-text">Exam<span class="accent">Prep</span></span>
             </a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -169,58 +95,28 @@
 
         <div class="support-grid">
             <a href="https://t.me/KirchhoffExamPrep" class="support-card" target="_blank">
-                <span class="support-icon">📢</span>
+                <img src="icon-telegram.png" alt="Telegram">
                 <h3>Telegram Channel</h3>
                 <p>Join for updates, free codes, and exam tips</p>
             </a>
             
-            <a href="https://wa.me/yourwhatsappnumber" class="support-card" target="_blank">
-                <span class="support-icon">💬</span>
-                <h3>WhatsApp</h3>
-                <p>Direct chat for quick support</p>
+            <a href="https://whatsapp.com/channel/0029Vb7NGXBCMY0DDEUXz546" class="support-card" target="_blank">
+                <img src="icon-whatsapp.png" alt="WhatsApp Channel">
+                <h3>WhatsApp Channel</h3>
+                <p>Follow for announcements and study resources</p>
             </a>
             
-            <a href="mailto:your@email.com" class="support-card">
-                <span class="support-icon">📧</span>
-                <h3>Email</h3>
-                <p>For detailed inquiries and feedback</p>
+            <a href="https://wa.me/2349031144480" class="support-card" target="_blank">
+                <img src="icon-phone.png" alt="WhatsApp">
+                <h3>WhatsApp Direct</h3>
+                <p>+234 903 114 4480<br>+234 708 007 7741</p>
             </a>
             
-            <a href="https://instagram.com/yourhandle" class="support-card" target="_blank">
-                <span class="support-icon">📸</span>
-                <h3>Instagram</h3>
-                <p>Follow us for study motivation</p>
+            <a href="mailto:kirchhoffandrew2658@gmail.com" class="support-card">
+                <img src="icon-email.png" alt="Email">
+                <h3>Email Support</h3>
+                <p>kirchhoffandrew2658@gmail.com<br>esekirchhoff2658@gmail.com</p>
             </a>
-        </div>
-
-        <!-- CONTACT FORM -->
-        <div class="contact-form">
-            <h3>Send Us a <span class="accent">Message</span></h3>
-            <p>Fill the form below and we'll get back to you</p>
-            
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Send Message ✈️</button>
-            </form>
         </div>
 
     </section>
@@ -230,7 +126,10 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <span class="footer-logo">📚 Exam<span class="accent">Prep</span></span>
+                    <span class="footer-logo">
+                        <img src="logo.png" alt="Exam Prep Logo">
+                        Exam<span class="accent">Prep</span>
+                    </span>
                     <p>Nigeria's smartest CBT exam preparation app. Prepare smarter, score higher.</p>
                 </div>
                 <div class="footer-links">
@@ -245,11 +144,12 @@
                     <a href="support.html">Contact Us</a>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="https://t.me/KirchhoffExamPrep" target="_blank">Telegram</a>
+                    <a href="https://whatsapp.com/channel/0029Vb7NGXBCMY0DDEUXz546" target="_blank">WhatsApp Channel</a>
                 </div>
                 <div class="footer-links">
                     <h4>Download</h4>
                     <a href="https://apkpure.com/p/com.kirchhoff.examprep" target="_blank">APKPure</a>
-                    <a href="https://uptodown.com" target="_blank">UpToDown</a>
+                    <a href="examprep.apk.com" target="_blank">Official Website</a>
                 </div>
             </div>
             <div class="footer-bottom">
