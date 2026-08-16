@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Exam Prep</title>
+    <meta name="description" content="Frequently asked questions about Exam Prep — installation, activation, features, and more.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .faq-item {
+            background: var(--card);
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            color: var(--green);
+        }
+        
+        .faq-question .faq-toggle {
+            font-size: 22px;
+            color: var(--green);
+            font-weight: 400;
+            transition: var(--transition);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 24px;
+        }
+        
+        .faq-answer.open {
+            max-height: 500px;
+            padding-bottom: 20px;
+        }
+        
+        .faq-answer p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Exam<span class="accent">Prep</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="index.html#download" class="nav-download-btn">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <h1 class="section-title">Frequently Asked <span class="accent">Questions</span></h1>
+        <p class="section-subtitle">Everything you need to know about Exam Prep</p>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How do I download and install Exam Prep?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Download the APK from APKPure or UpToDown. Once downloaded, tap the APK file on your phone. If your phone asks for permission to install from unknown sources, go to Settings → Security → enable "Install from Unknown Sources." Then follow the installation prompts.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Is Exam Prep really free?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! Exam Prep is free to download and comes with a 3-day free trial that gives you FULL access to all features. After the trial expires, you can continue using the app with limited access (10 questions per session, 2 flashcards, and only Chapter 1 of novels) or activate for full unlimited access.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How does the 3-day free trial work?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>When you first launch the app, your 3-day trial starts automatically. You get FULL access to all features — CBT simulator, all questions, flashcards, novel summaries, everything. After 3 days, the app switches to limited mode unless you activate.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How do I activate the full version?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Go to the Activation screen in the app. Choose your plan, enter your activation code, and follow the checkout process. Activation codes are available through our Telegram channel or by contacting support.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Does Exam Prep work offline?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! All questions, study materials, and novel summaries are stored locally on your device. You can study without internet connection. Activation requires internet, but once activated, everything works offline.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                What exams does Exam Prep cover?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Exam Prep covers JAMB UTME, WAEC (SSCE), NECO, and Post UTME for 23+ Nigerian universities. We include past questions, study materials, and recommended novel summaries for all these exams.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Is Exam Prep affiliated with JAMB or WAEC?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>No. Exam Prep is an independent educational app. We are NOT affiliated with, endorsed by, or connected to JAMB, WAEC, NECO, or any official examination body. All questions and materials are for practice purposes only.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How many questions are in the app?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We have 50,000+ past questions across JAMB, WAEC, NECO, and Post UTME subjects. Each question includes options, correct answer, and detailed explanation.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Can I use Exam Prep on any Android phone?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Exam Prep works on Android 5.0 (Lollipop) and higher. It's lightweight and optimized for all screen sizes, including low-end devices.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How do I get an activation code?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Activation codes are available through our Telegram channel (@KirchhoffExamPrep). We also share free codes during giveaways and promotions. Contact support for bulk purchases.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                I lost my activation. What do I do?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Contact us through the Support page or Telegram. Provide your activation code or device details and we'll help you recover access.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Does the app collect my personal data?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>No. Exam Prep does not collect or share personal data. Your study progress and scores are stored locally on your device only. See our Privacy Policy for full details.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="section-container">
+            <h2>Still Have <span class="accent">Questions?</span></h2>
+            <p>Contact our support team — we're happy to help!</p>
+            <a href="support.html" class="btn-primary">📞 Contact Support</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">📚 Exam<span class="accent">Prep</span></span>
+                    <p>Nigeria's smartest CBT exam preparation app. Prepare smarter, score higher.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="support.html">Contact Us</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="https://t.me/KirchhoffExamPrep" target="_blank">Telegram</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Download</h4>
+                    <a href="https://apkpure.com/p/com.kirchhoff.examprep" target="_blank">APKPure</a>
+                    <a href="https://uptodown.com" target="_blank">UpToDown</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span class="current-year">2025</span> Exam Prep by Kirchhoff®. All rights reserved.</p>
+                <p>Not affiliated with JAMB, WAEC, NECO, or any examination body.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+          </html>
