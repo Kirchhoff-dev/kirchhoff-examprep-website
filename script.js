@@ -9,10 +9,6 @@ const navMenu = document.getElementById('navMenu');
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('open');
-        
-        // Animate hamburger to X
-        const spans = navToggle.querySelectorAll('span');
-        spans.forEach(span => span.classList.toggle('active'));
     });
     
     // Close menu when a link is clicked
@@ -46,7 +42,89 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// FAQ Accordion (for faq.html)
+// ============================================
+// TESTIMONIAL SLIDER
+// ============================================
+const track = document.getElementById('testimonialTrack');
+const dots = document.querySelectorAll('.slider-dot');
+let currentSlide = 0;
+let autoSlideInterval;
+
+function goToSlide(index) {
+    if (!track) return;
+    
+    const slides = track.querySelectorAll('.testimonial-slide');
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    
+    currentSlide = index;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    
+    // Update dots
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+// Dot click handlers
+dots.forEach(dot => {
+    dot.addEventListener('click', function() {
+        const index = parseInt(this.getAttribute('data-index'));
+        goToSlide(index);
+        resetAutoSlide();
+    });
+});
+
+// Auto slide every 5 seconds
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        goToSlide(currentSlide + 1);
+    }, 5000);
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Start slider if it exists
+if (track && dots.length > 0) {
+    startAutoSlide();
+    
+    // Pause on hover (desktop)
+    const slider = document.getElementById('testimonialSlider');
+    if (slider) {
+        slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        slider.addEventListener('mouseleave', startAutoSlide);
+    }
+    
+    // Swipe support (mobile)
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        clearInterval(autoSlideInterval);
+    });
+    
+    slider.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const swipeDistance = touchStartX - touchEndX;
+        
+        if (Math.abs(swipeDistance) > 50) {
+            if (swipeDistance > 0) {
+                goToSlide(currentSlide + 1);
+            } else {
+                goToSlide(currentSlide - 1);
+            }
+        }
+        startAutoSlide();
+    });
+}
+
+// ============================================
+// FAQ ACCORDION
+// ============================================
 document.querySelectorAll('.faq-question').forEach(question => {
     question.addEventListener('click', function() {
         const answer = this.nextElementSibling;
@@ -58,15 +136,23 @@ document.querySelectorAll('.faq-question').forEach(question => {
             ans.style.maxHeight = null;
         });
         
-        // Open clicked answer
+        // Toggle clicked answer
         if (!isOpen) {
             answer.classList.add('open');
             answer.style.maxHeight = answer.scrollHeight + 'px';
         }
+        
+        // Update toggle icon
+        const toggle = this.querySelector('.faq-toggle');
+        if (toggle) {
+            toggle.textContent = isOpen ? '+' : '−';
+        }
     });
 });
 
-// Reveal animations on scroll
+// ============================================
+// REVEAL ANIMATIONS ON SCROLL
+// ============================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -81,15 +167,17 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe feature cards, testimonial cards, and download buttons
-document.querySelectorAll('.feature-card, .testimonial-card, .btn-download').forEach(el => {
+// Observe feature cards
+document.querySelectorAll('.feature-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
-// Current year in footer
+// ============================================
+// CURRENT YEAR IN FOOTER
+// ============================================
 const yearSpans = document.querySelectorAll('.current-year');
 yearSpans.forEach(span => {
     span.textContent = new Date().getFullYear();
