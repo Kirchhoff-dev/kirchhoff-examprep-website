@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Exam Prep Tips & Guides</title>
+    <meta name="description" content="Exam tips, study guides, and preparation strategies for JAMB, WAEC, NECO, and Post UTME.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .blog-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        
+        .blog-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text);
+            display: block;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--green);
+        }
+        
+        .blog-category {
+            display: inline-block;
+            background: var(--green-light);
+            color: var(--green-dark);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .blog-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .blog-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .blog-date {
+            display: block;
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-top: 12px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Exam<span class="accent">Prep</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="index.html#download" class="nav-download-btn">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- BLOG SECTION -->
+    <section class="blog-section">
+        <h1 class="section-title">Exam Prep <span class="accent">Blog</span></h1>
+        <p class="section-subtitle">Tips, guides, and strategies to help you succeed</p>
+
+        <div class="blog-grid">
+            <a href="blog/how-to-pass-jamb.html" class="blog-card">
+                <span class="blog-category">JAMB</span>
+                <h3>How to Pass JAMB in 30 Days (2025 Ultimate Guide)</h3>
+                <p>A step-by-step study plan to score 280+ in your JAMB UTME. Covers subject strategies, time management, and CBT tips.</p>
+                <span class="blog-date">Updated: 2025</span>
+            </a>
+
+            <a href="blog/post-utme-guide.html" class="blog-card">
+                <span class="blog-category">Post UTME</span>
+                <h3>Post UTME Past Questions: 23+ Schools Covered</h3>
+                <p>Everything you need to know about Post UTME screening for UNILAG, OAU, UI, UNIBEN, and more. Subject selection tips included.</p>
+                <span class="blog-date">Updated: 2025</span>
+            </a>
+
+            <a href="blog/waec-syllabus-tips.html" class="blog-card">
+                <span class="blog-category">WAEC</span>
+                <h3>WAEC Syllabus Breakdown: All Subjects Explained</h3>
+                <p>Complete breakdown of the WAEC syllabus with study priorities, key topics, and revision strategies for top grades.</p>
+                <span class="blog-date">Updated: 2025</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">📚 Exam<span class="accent">Prep</span></span>
+                    <p>Nigeria's smartest CBT exam preparation app. Prepare smarter, score higher.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="support.html">Contact Us</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="https://t.me/KirchhoffExamPrep" target="_blank">Telegram</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Download</h4>
+                    <a href="https://apkpure.com/p/com.kirchhoff.examprep" target="_blank">APKPure</a>
+                    <a href="https://uptodown.com" target="_blank">UpToDown</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span class="current-year">2025</span> Exam Prep by Kirchhoff®. All rights reserved.</p>
+                <p>Not affiliated with JAMB, WAEC, NECO, or any examination body.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                  </html>
