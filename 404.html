@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .error-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 24px;
+        }
+        
+        .error-emoji {
+            font-size: 80px;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .error-code {
+            font-size: 72px;
+            font-weight: 900;
+            color: var(--green);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        
+        .error-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        
+        .error-message {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ERROR SECTION -->
+    <section class="error-section">
+        <div>
+            <span class="error-emoji">😅</span>
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title">Page Not Found</h2>
+            <p class="error-message">Oops! This page doesn't exist or has been moved. Don't worry — your exam prep journey continues!</p>
+            <a href="index.html" class="btn-primary">🏠 Back to Home</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
