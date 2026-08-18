@@ -259,34 +259,10 @@ img {
     justify-content: center;
 }
 
-.phone-mockup {
-    width: 300px;
-    height: 600px;
-    background: var(--green-dark);
-    border-radius: 40px;
-    padding: 20px;
-    box-shadow: var(--shadow-lg);
-}
-
-.phone-screen {
-    width: 100%;
-    height: 100%;
-    background: var(--card);
-    border-radius: 28px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 20px;
-    text-align: center;
-}
-
-.phone-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 28px;
+.hero-showcase {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
 
 /* ============================================
@@ -444,9 +420,12 @@ img {
 
 .download-buttons {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 16px;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .btn-download {
@@ -460,7 +439,8 @@ img {
     align-items: center;
     gap: 16px;
     transition: var(--transition);
-    min-width: 280px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .btn-download:hover {
@@ -675,6 +655,6 @@ img {
     }
     
     .btn-download {
-        min-width: 100%;
+        max-width: 100%;
     }
    }
